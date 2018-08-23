@@ -831,3 +831,7 @@ Completed 302 Found in 100ms (ActiveRecord: 4.2ms)
 Started GET "/posts/11" for 4.30.5.194 at 2018-08-23 22:11:50 +0000
 Processing by PostsController#show as HTML
   Parameters: {"id"=>"11"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (30.4ms)
+Completed 200 OK in 72ms (Views: 53.7ms | ActiveRecord: 0.5ms)
